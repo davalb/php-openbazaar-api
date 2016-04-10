@@ -1,0 +1,39 @@
+HTTP/1.1 200 OK
+Reproxy-Status: yes
+Access-Control-Allow-Origin: *
+Cache-Control: public, must-revalidate
+Content-Type: application/json
+Server: lighttpd
+Content-Length: 5103
+Date: Mon, 28 Jul 2014 18:40:39 GMT
+X-Varnish: 1913846781 1913780733
+Age: 259
+Via: 1.1 varnish
+Connection: close
+
+{
+    "profile": {
+        "website": "", 
+        "about": "drwasho's store", 
+        "guid": "375ead0967e63b6cec49f28d3be8731b20f081db", 
+        "vendor": true, 
+        "name": "drwasho", 
+        "text_color": 16777215, 
+        "social_accounts": {}, 
+        "header_hash": "7de0c4aab5929ad7c413175ec9dd2ae1476e19b9", 
+        "encryption_key": "0374e542b2faa53d40b43f36c722d9f40cbf40dd11da3afb6508010a8b228126", 
+        "secondary_color": 3243448, 
+        "moderator": true, 
+        "moderator_list": [
+            ""
+        ], 
+        "pgp_key": "", 
+        "nsfw": false, 
+        "location": "UNITED_STATES", 
+        "avatar_hash": "", 
+        "handle": "", 
+        "primary_color": 551582, 
+        "background_color": 407379, 
+        "email": ""
+    }
+}
