@@ -21,7 +21,7 @@ Creating a new instance is as simple as:
 
 ```php
 <?php
-$this->service = ClientFactory::factory([
+$this->service = OpenBazaar\ClientFactory::factory([
 		'base_url' => 'http://your_ip_or_domain_here:18469/',
 	]
 );

@@ -1,5 +1,7 @@
 <?php
 
+namespace OpenBazaar;
+
 use GuzzleHttp\Client;
 use GuzzleHttp\Command\Guzzle\Description;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
@@ -19,7 +21,7 @@ class ClientFactory
         ];
         $mergedConfig = self::mergeRecursive($defaultConfig, $config);
         $client = new Client($mergedConfig);
-        $service = include __DIR__ . '/../resources/service.php';
+        $service = include __DIR__ . '/../../resources/service.php';
         $description = new Description($service);
 
         return new GuzzleClient($client, $description);
