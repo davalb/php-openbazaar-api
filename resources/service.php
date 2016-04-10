@@ -279,6 +279,139 @@ return [
             'uri' => 'api/v1/unmake_moderator',
             'responseModel' => 'GetResponse',
         ],
+        'createContract' => [
+            'httpMethod' => 'POST',
+            'cookies' => true,
+            'uri' => 'api/v1/contracts',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'expiration_date' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => true
+                ],
+                'metadata_category' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => true
+                ],
+                'title' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => true
+                ],
+                'description' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => true
+                ],
+                'currency_code' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => true
+                ],
+                'price' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => true
+                ],
+                'process_time' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => true
+                ],
+                'nsfw' => [
+                    'type' => 'boolean',
+                    'location' => 'query',
+                    'required' => true
+                ],
+                'shipping_origin' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'shipping_regions' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'est_delivery_domestic' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'est_delivery_international' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'terms_conditions' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'returns' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'shipping_currency_code' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'shipping_domestic' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'shipping_international' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'keywords' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'category' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'condition' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'sku' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'images' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'free_shipping' => [
+                    'type' => 'boolean',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'moderators' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'options' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+            ]
+        ]
     ],
     'models' => [
         'GetResponse' => [

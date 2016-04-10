@@ -181,6 +181,20 @@ class ClientTest extends \PHPUnit_Framework_TestCase
             ]
         );
     }
+    public function testCreateContract()
+    {
+        $history = new History();
+        $this->setExpectedException('GuzzleHttp\Command\Exception\CommandException', 'Validation errors: [expiration_date] is a required string
+[metadata_category] is a required string
+[title] is a required string
+[description] is a required string
+[currency_code] is a required string
+[price] is a required string
+[process_time] is a required string
+[nsfw] is a required boolean');
+        $client = $this->createClient('post_contracts', $history);
+        $response = $client->createContract();
+    }
 
     protected function createClient($mock, History $history)
     {
