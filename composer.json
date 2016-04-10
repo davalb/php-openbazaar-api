@@ -1,0 +1,23 @@
+{
+    "name": "davalb/php-openbazaar-api",
+    "description": "The OpenBazaar API makes it easy for developers to communicate with the OpenBazaar marketplace",
+    "type": "library",
+    "keywords": ["openbazaar", "api"],
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "~5.0",
+        "guzzlehttp/guzzle-services": "~0.5.0",
+        "guzzlehttp/oauth-subscriber": "~0.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4"
+    },
+    "authors": [
+        {
+            "name": "David Albrecht"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "OpenBazaar": "lib/" }
+    }
+}
