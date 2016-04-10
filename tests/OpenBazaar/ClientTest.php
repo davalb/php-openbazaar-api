@@ -1,11 +1,20 @@
 <?php
-
+/**
+ * This file is part of the php-openbazaar-api.
+ *
+ * @link https://github.com/davalb/php-openbazaar-api
+ * @package OpenBazaar
+ * @author David Albrecht
+ */
 namespace OpenBazaar\Test;
 
-use OpenBazaar\ClientFactory;
 use GuzzleHttp\Subscriber\History;
 use GuzzleHttp\Subscriber\Mock;
+use OpenBazaar\ClientFactory;
 
+/**
+ * TestClass for OpenBazaar Client
+ */
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
     public function testGetProfile()

@@ -1,11 +1,20 @@
 <?php
-
+/**
+ * This file is part of the php-openbazaar-api.
+ *
+ * @link https://github.com/davalb/php-openbazaar-api
+ * @package OpenBazaar
+ * @author David Albrecht
+ */
 namespace OpenBazaar;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Command\Guzzle\Description;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
 
+/**
+ * Factory class that constructs and returns a configured GuzzleClient
+ */
 class ClientFactory
 {
     /**

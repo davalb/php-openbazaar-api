@@ -38,5 +38,13 @@ It is necessary to run the login first. After that you can run more api-calls wi
 For more information about Guzzle and its plugins checkout [the docs.](http://guzzle.readthedocs.org/en/latest/)
 
 ## Contributing
-Implemented a missing call? PR's are welcome! 
-
+Implemented a missing call? PR's are welcome!
+The project follows the cakephp coding standards.
+Plese install and use the [php code sniffer](https://github.com/cakephp/cakephp-codesniffer) before sending a pull request
+```
+phpcs --standard=cakephp php-openbazaar-api/
+```
+Also please provide tests for code that you write. Tests can be run like this
+```
+bin/phpunit davalb/php-openbazaar-api/tests/
+```
