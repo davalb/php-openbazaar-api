@@ -71,6 +71,18 @@ return [
             'uri' => 'api/v1/settings',
             'responseModel' => 'GetResponse',
         ],
+        'getNotifications' => [
+            'httpMethod' => 'GET',
+            'uri' => 'api/v1/get_notifications',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'limit' => [
+                    'type' => 'integer',
+                    'location' => 'query',
+                    'required' => false
+                ],
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [

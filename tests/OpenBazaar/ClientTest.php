@@ -55,6 +55,15 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $response = $client->getSettings();
         $this->assertSame($response['refund_address'], "n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi");
     }
+    public function testGetNotificationss()
+    {
+        $history = new History();
+        $client = $this->createClient('get_notifications', $history);
+        $response = $client->getNotifications();
+        $this->assertSame($response['notifications'][0]['guid'], "fa5025f8ac9fcba532cff9608d1c080a84e2f7a1");
+        $this->setExpectedException('GuzzleHttp\Command\Exception\CommandException', 'Validation errors: [limit] must be of type integer');
+        $response = $client->getNotifications(['limit' => 'string']);
+    }
     public function testLoginFail()
     {
         $history = new History();
