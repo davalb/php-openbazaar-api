@@ -120,6 +120,11 @@ return [
             'uri' => 'api/v1/get_sales',
             'responseModel' => 'GetResponse',
         ],
+        'getPurchases' => [
+            'httpMethod' => 'GET',
+            'uri' => 'api/v1/get_purchases',
+            'responseModel' => 'GetResponse',
+        ],
     ],
     'models' => [
         'GetResponse' => [

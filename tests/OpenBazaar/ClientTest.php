@@ -91,6 +91,13 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $response = $client->getSales();
         $this->assertSame($response[0]['order_id'], "549c844c08048166ed4ac9d44d9bf8916c7ce9cb");
     }
+    public function testGetPurchases()
+    {
+        $history = new History();
+        $client = $this->createClient('get_purchases', $history);
+        $response = $client->getPurchases();
+        $this->assertSame($response[0]['order_id'], "8bd10ebab092d0fbf2cec1f2d0ad84dfa0f4f8df");
+    }
     public function testLoginFail()
     {
         $history = new History();
