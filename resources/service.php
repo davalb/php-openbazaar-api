@@ -110,6 +110,23 @@ return [
             'uri' => 'api/v1/get_chat_conversations',
             'responseModel' => 'GetResponse',
         ],
+        'getContracts' => [
+            'httpMethod' => 'GET',
+            'uri' => 'api/v1/get_contracts',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'id' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => true
+                ],
+                'guid' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [
