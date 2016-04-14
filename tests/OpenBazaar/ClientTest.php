@@ -77,6 +77,13 @@ class ClientTest extends \PHPUnit_Framework_TestCase
             'limit' => 'string'
         ]);
     }
+    public function testGetChatConversations()
+    {
+        $history = new History();
+        $client = $this->createClient('get_chat_conversations', $history);
+        $response = $client->getChatConversations();
+        $this->assertSame($response[0]['guid'], "04b94de3d69aadbbcef31e6059fc5255655df45a");
+    }
     public function testLoginFail()
     {
         $history = new History();

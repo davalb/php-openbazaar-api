@@ -1,0 +1,31 @@
+HTTP/1.1 200 OK
+Reproxy-Status: yes
+Access-Control-Allow-Origin: *
+Cache-Control: public, must-revalidate
+Content-Type: application/json
+Server: lighttpd
+Content-Length: 5103
+Date: Mon, 28 Jul 2014 18:40:39 GMT
+X-Varnish: 1913846781 1913780733
+Age: 259
+Via: 1.1 varnish
+Connection: close
+
+[
+    {
+        "unread": 0,
+        "last_message": "Your store is awesome!\n",
+        "timestamp": 1449102448.72862,
+        "encryption_key": "66613133316636316462376131316232636631306332653763323364356162646665313365646339353564306538316536343534663736303763346566373139",
+        "avatar_hash": "",
+        "guid": "04b94de3d69aadbbcef31e6059fc5255655df45a"
+    },
+    {
+        "unread": 0,
+        "last_message": "some other message!\n",
+        "timestamp": 1449102448.72862,
+        "encryption_key": "66613133316636316462376131316232636631306332653763323364356162646665313365646339353564306538316536343534663736303763346566373139",
+        "avatar_hash": "",
+        "guid": "04b94de3d69aadbbcef31e6059fc5255655df45a"
+    }
+]

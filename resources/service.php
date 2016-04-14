@@ -105,6 +105,11 @@ return [
                 ],
             ]
         ],
+        'getChatConversations' => [
+            'httpMethod' => 'GET',
+            'uri' => 'api/v1/get_chat_conversations',
+            'responseModel' => 'GetResponse',
+        ],
     ],
     'models' => [
         'GetResponse' => [
