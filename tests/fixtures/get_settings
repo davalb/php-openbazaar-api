@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Reproxy-Status: yes
+Access-Control-Allow-Origin: *
+Cache-Control: public, must-revalidate
+Content-Type: application/json
+Server: lighttpd
+Content-Length: 5103
+Date: Mon, 28 Jul 2014 18:40:39 GMT
+X-Varnish: 1913846781 1913780733
+Age: 259
+Via: 1.1 varnish
+Connection: close
+
+{
+    "blocked_guids": [""],
+    "refund_address": "n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi",
+    "refund_policy": "No refund policy",
+    "notifications": true,
+    "seed": "e4ed7abcd397c3adf9f13a8dd31db6c99dbf48315e1c6d75196318c0bb7bfedd",
+    "shipping_addresses": ["[{\"name\":\"Washington Sanchez\",\"street\":\"1060 W Addison\",\"city\":\"Chicago\",\"state\":\"Illinois\",\"postal_code\":\"60613\",\"country\":\"UNITED_STATES\",\"displayCountry\":\"United States of America (The)\"}]"],
+    "terms_conditions": "No terms or conditions",
+    "language": "en",
+    "ssl": true,
+    "country": "UNITED_STATES",
+    "time_zone": "10",
+    "libbitcoin_server": "",
+    "currency_code": "BTC"
+}

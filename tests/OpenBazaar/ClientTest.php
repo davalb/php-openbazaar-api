@@ -48,6 +48,13 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $response = $client->getListings();
         $this->assertSame($response['following'][0]['guid'], "f9ea0b394c58e14c75e8a754ae721ad8bb0cf850");
     }
+    public function testGetSettings()
+    {
+        $history = new History();
+        $client = $this->createClient('get_settings', $history);
+        $response = $client->getSettings();
+        $this->assertSame($response['refund_address'], "n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi");
+    }
     public function testLoginFail()
     {
         $history = new History();

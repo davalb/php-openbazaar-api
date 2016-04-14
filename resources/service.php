@@ -66,6 +66,11 @@ return [
                 ],
             ]
         ],
+        'getSettings' => [
+            'httpMethod' => 'GET',
+            'uri' => 'api/v1/settings',
+            'responseModel' => 'GetResponse',
+        ],
     ],
     'models' => [
         'GetResponse' => [
