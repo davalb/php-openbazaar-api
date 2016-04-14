@@ -110,6 +110,11 @@ return [
             'uri' => 'api/v1/get_chat_conversations',
             'responseModel' => 'GetResponse',
         ],
+        'shutdown' => [
+            'httpMethod' => 'GET',
+            'uri' => 'api/v1/shutdown',
+            'responseModel' => 'GetResponse',
+        ],
     ],
     'models' => [
         'GetResponse' => [
