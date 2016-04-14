@@ -54,6 +54,18 @@ return [
                 ],
             ]
         ],
+        'getFollowing' => [
+            'httpMethod' => 'GET',
+            'uri' => 'api/v1/get_following',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'guid' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [

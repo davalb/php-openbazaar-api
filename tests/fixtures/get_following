@@ -1,0 +1,31 @@
+HTTP/1.1 200 OK
+Reproxy-Status: yes
+Access-Control-Allow-Origin: *
+Cache-Control: public, must-revalidate
+Content-Type: application/json
+Server: lighttpd
+Content-Length: 5103
+Date: Mon, 28 Jul 2014 18:40:39 GMT
+X-Varnish: 1913846781 1913780733
+Age: 259
+Via: 1.1 varnish
+Connection: close
+
+{
+    "following": [
+        {
+            "avatar_hash": "0ad0516a91bbd9147e1f23ccb5f3310181d924ed", 
+            "guid": "f9ea0b394c58e14c75e8a754ae721ad8bb0cf850", 
+            "handle": "", 
+            "name": "SamTest", 
+            "nsfw": false
+        }, 
+        {
+            "avatar_hash": "23aeab637fc55e8b9d73dfba28ab111a53261f46", 
+            "guid": "b1a4a8b4b7e934c7f8b119a671044c90a7513968", 
+            "handle": "@seed1", 
+            "name": "OpenBazaar Seed Server", 
+            "nsfw": false
+        }
+    ]
+}
