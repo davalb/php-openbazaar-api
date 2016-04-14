@@ -115,6 +115,11 @@ return [
             'uri' => 'api/v1/shutdown',
             'responseModel' => 'GetResponse',
         ],
+        'getSales' => [
+            'httpMethod' => 'GET',
+            'uri' => 'api/v1/get_sales',
+            'responseModel' => 'GetResponse',
+        ],
     ],
     'models' => [
         'GetResponse' => [
