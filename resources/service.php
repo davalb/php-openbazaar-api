@@ -42,6 +42,18 @@ return [
                 ],
             ]
         ],
+        'getFollowers' => [
+            'httpMethod' => 'GET',
+            'uri' => 'api/v1/get_followers',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'guid' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [

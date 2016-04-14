@@ -1,0 +1,31 @@
+HTTP/1.1 200 OK
+Reproxy-Status: yes
+Access-Control-Allow-Origin: *
+Cache-Control: public, must-revalidate
+Content-Type: application/json
+Server: lighttpd
+Content-Length: 5103
+Date: Mon, 28 Jul 2014 18:40:39 GMT
+X-Varnish: 1913846781 1913780733
+Age: 259
+Via: 1.1 varnish
+Connection: close
+
+{
+    "followers": [
+        {
+            "avatar_hash": "43e0b057e37f34fdc6f8f421af0875c63a20e321", 
+            "guid": "53328edb89afa8a653b4fa062f0cb255aa4a1e50", 
+            "handle": "@chrispacia", 
+            "name": "Chris Pacia", 
+            "nsfw": false
+        }, 
+        {
+            "avatar_hash": "27c221cd1b99a0feed173dc52ae9239e175176e3", 
+            "guid": "2a7a579ca9a43a1b3d8338546c95196c5ef46170", 
+            "handle": "@drwasho", 
+            "name": "drwasho", 
+            "nsfw": false
+        }
+    ]
+}

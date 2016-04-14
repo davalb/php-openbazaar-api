@@ -34,6 +34,13 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $response = $client->getListings();
         $this->assertSame($response['listings'][0]['contract_hash'], "042fe5466b814394ea27532a7436e596414e93a3");
     }
+    public function testGetFollowers()
+    {
+        $history = new History();
+        $client = $this->createClient('get_followers', $history);
+        $response = $client->getListings();
+        $this->assertSame($response['followers'][0]['guid'], "53328edb89afa8a653b4fa062f0cb255aa4a1e50");
+    }
     public function testLoginFail()
     {
         $history = new History();
