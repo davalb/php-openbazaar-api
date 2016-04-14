@@ -64,6 +64,19 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $this->setExpectedException('GuzzleHttp\Command\Exception\CommandException', 'Validation errors: [limit] must be of type integer');
         $response = $client->getNotifications(['limit' => 'string']);
     }
+    public function testGetChatMessages()
+    {
+        $history = new History();
+        $client = $this->createClient('get_chat_messages', $history);
+        $response = $client->getChatMessages(
+            ['guid' => 'fa5025f8ac9fcba532cff9608d1c080a84e2f7a1']
+        );
+        $this->assertSame($response[0]['guid'], "fa5025f8ac9fcba532cff9608d1c080a84e2f7a1");
+        $this->setExpectedException('GuzzleHttp\Command\Exception\CommandException', 'Validation errors: [guid] is a required string');
+        $response = $client->getChatMessages([
+            'limit' => 'string'
+        ]);
+    }
     public function testLoginFail()
     {
         $history = new History();

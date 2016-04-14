@@ -83,6 +83,28 @@ return [
                 ],
             ]
         ],
+        'getChatMessages' => [
+            'httpMethod' => 'GET',
+            'uri' => 'api/v1/get_chat_messages',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'guid' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => true
+                ],
+                'limit' => [
+                    'type' => 'integer',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'start' => [
+                    'type' => 'integer',
+                    'location' => 'query',
+                    'required' => false
+                ],
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [
