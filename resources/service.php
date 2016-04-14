@@ -23,6 +23,18 @@ return [
             'uri' => 'api/v1/profile',
             'responseModel' => 'GetResponse',
         ],
+        'getListings' => [
+            'httpMethod' => 'GET',
+            'uri' => 'api/v1/get_listings',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'guid' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [

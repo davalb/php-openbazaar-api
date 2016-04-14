@@ -29,7 +29,12 @@ $response = $this->service->login([
 	'username' => 'your_username_here',
 	'password' => 'your_password_here',
 ]);
+// get Profile will return your profile info
 $result = $this->service->getProfile();
+// get Listings for the store with the given guid
+$result = $this->service->getListings([
+	'guid' => 'a06aa22a38f0e62221ab74464c311bd88305f88c'
+]);
 ?>
 ```
 It is necessary to run the login first. After that you can run more api-calls without worrying about the authentication, since the cookie is persisted. 

@@ -1,0 +1,30 @@
+HTTP/1.1 200 OK
+Reproxy-Status: yes
+Access-Control-Allow-Origin: *
+Cache-Control: public, must-revalidate
+Content-Type: application/json
+Server: lighttpd
+Content-Length: 5103
+Date: Mon, 28 Jul 2014 18:40:39 GMT
+X-Varnish: 1913846781 1913780733
+Age: 259
+Via: 1.1 varnish
+Connection: close
+
+{
+    "listings": [
+        {
+            "contract_hash": "042fe5466b814394ea27532a7436e596414e93a3", 
+            "category": "Figurine", 
+            "nsfw": false, 
+            "title": "Yoda Figurine", 
+            "thumbnail_hash": "f1d0a23bd9417024118906ca6b6432abee51f5f5", 
+            "price": 0.0010000000474974513, 
+            "origin": "UNITED_STATES", 
+            "currency_code": "BTC", 
+            "ships_to": [
+                "UNITED_STATES"
+            ]
+        }
+    ]
+}
