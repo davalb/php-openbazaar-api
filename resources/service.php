@@ -125,6 +125,18 @@ return [
             'uri' => 'api/v1/get_purchases',
             'responseModel' => 'GetResponse',
         ],
+        'follow' => [
+            'httpMethod' => 'POST',
+            'uri' => 'api/v1/follow',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'guid' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ]
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [

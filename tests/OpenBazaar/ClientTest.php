@@ -120,6 +120,15 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         ]);
         $this->assertSame($response['success'], true);
     }
+    public function testFollow()
+    {
+        $history = new History();
+        $client = $this->createClient('follow_success', $history);
+        $this->setExpectedException('GuzzleHttp\Command\Exception\CommandException', 'Validation errors: [guid] is a required string');
+        $response = $client->follow(
+            ['guid' => null]
+        );
+    }
 
     protected function createClient($mock, History $history)
     {

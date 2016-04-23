@@ -35,6 +35,10 @@ $result = $this->service->getProfile();
 $result = $this->service->getListings([
 	'guid' => 'a06aa22a38f0e62221ab74464c311bd88305f88c'
 ]);
+// follow another page
+$result = $this->service->follow(
+	['guid' => 'a06aa22a38f0e62221ab74464c311bd88305f88c']
+);
 ?>
 ```
 It is necessary to run the login first. After that you can run more api-calls without worrying about the authentication, since the cookie is persisted. 
