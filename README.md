@@ -39,6 +39,10 @@ $result = $this->service->getListings([
 $result = $this->service->follow(
 	['guid' => 'a06aa22a38f0e62221ab74464c311bd88305f88c']
 );
+// change your username
+$result = $this->service->changeProfile(
+	['name' => 'New Name']
+);
 ?>
 ```
 It is necessary to run the login first. After that you can run more api-calls without worrying about the authentication, since the cookie is persisted. 

@@ -149,6 +149,98 @@ return [
                 ]
             ]
         ],
+        'changeProfile' => [
+            'httpMethod' => 'POST',
+            'uri' => 'api/v1/profile',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'name' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'location' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'handle' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'about' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'short_description' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'nsfw' => [
+                    'type' => 'boolean',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'vendor' => [
+                    'type' => 'boolean',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'moderator' => [
+                    'type' => 'boolean',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'website' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'email' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'primary_color' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'secondary_color' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'text_color' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'background_color' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'avatar' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'header' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'pgp_key' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ]
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [

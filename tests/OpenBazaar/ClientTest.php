@@ -138,6 +138,49 @@ class ClientTest extends \PHPUnit_Framework_TestCase
             []
         );
     }
+    public function testChangeFailure()
+    {
+        $history = new History();
+        $client = $this->createClient('change_profile_failure', $history);
+        $this->setExpectedException('GuzzleHttp\Command\Exception\CommandException', 'Validation errors: [name] must be of type string
+[location] must be of type string
+[handle] must be of type string
+[about] must be of type string
+[short_description] must be of type string
+[nsfw] must be of type boolean
+[vendor] must be of type boolean
+[moderator] must be of type boolean
+[website] must be of type string
+[email] must be of type string
+[primary_color] must be of type string
+[secondary_color] must be of type string
+[text_color] must be of type string
+[background_color] must be of type string
+[avatar] must be of type string
+[header] must be of type string
+[pgp_key] must be of type string');
+        $response = $client->changeProfile(
+            [
+                'name' => false,
+                'location' => false,
+                'handle' => false,
+                'about' => false,
+                'short_description' => false,
+                'nsfw' => 'string',
+                'vendor' => 'string',
+                'moderator' => 'string',
+                'website' => false,
+                'email' => false,
+                'primary_color' => false,
+                'secondary_color' => false,
+                'text_color' => false,
+                'background_color' => false,
+                'avatar' => false,
+                'header' => false,
+                'pgp_key' => false,
+            ]
+        );
+    }
 
     protected function createClient($mock, History $history)
     {
