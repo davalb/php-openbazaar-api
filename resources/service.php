@@ -137,6 +137,18 @@ return [
                 ]
             ]
         ],
+        'unfollow' => [
+            'httpMethod' => 'POST',
+            'uri' => 'api/v1/unfollow',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'guid' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ]
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [

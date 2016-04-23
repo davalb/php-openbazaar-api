@@ -129,6 +129,15 @@ class ClientTest extends \PHPUnit_Framework_TestCase
             ['guid' => null]
         );
     }
+    public function testUnfollow()
+    {
+        $history = new History();
+        $client = $this->createClient('unfollow_success', $history);
+        $this->setExpectedException('GuzzleHttp\Command\Exception\CommandException', 'Validation errors: [guid] is a required string');
+        $response = $client->unfollow(
+            []
+        );
+    }
 
     protected function createClient($mock, History $history)
     {
