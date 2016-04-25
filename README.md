@@ -21,26 +21,26 @@ Creating a new instance is as simple as:
 
 ```php
 <?php
-$this->service = OpenBazaar\ClientFactory::factory([
+$service = OpenBazaar\ClientFactory::factory([
 		'base_url' => 'http://your_ip_or_domain_here:18469/',
 	]
 );
-$response = $this->service->login([
+$response = $service->login([
 	'username' => 'your_username_here',
 	'password' => 'your_password_here',
 ]);
 // get Profile will return your profile info
-$result = $this->service->getProfile();
+$result = $service->getProfile();
 // get Listings for the store with the given guid
-$result = $this->service->getListings([
+$result = $service->getListings([
 	'guid' => 'a06aa22a38f0e62221ab74464c311bd88305f88c'
 ]);
 // follow another page
-$result = $this->service->follow(
+$result = $service->follow(
 	['guid' => 'a06aa22a38f0e62221ab74464c311bd88305f88c']
 );
 // change your username
-$result = $this->service->changeProfile(
+$result = $service->changeProfile(
 	['name' => 'New Name']
 );
 ?>
