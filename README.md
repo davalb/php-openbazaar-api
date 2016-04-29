@@ -43,6 +43,11 @@ $result = $service->follow(
 $result = $service->changeProfile(
 	['name' => 'New Name']
 );
+// set social account
+$result = $service->createSocialAccount([
+    'account_type' => 'twitter',
+    'username' => 'user',
+]);
 ?>
 ```
 It is necessary to run the login first. After that you can run more api-calls without worrying about the authentication, since the cookie is persisted. 

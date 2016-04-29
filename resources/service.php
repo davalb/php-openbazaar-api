@@ -241,6 +241,34 @@ return [
                 ]
             ]
         ],
+        'createSocialAccount' => [
+            'httpMethod' => 'POST',
+            'uri' => 'api/v1/social_accounts',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'account_type' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true,
+                    'filters' => [
+                        "strtolower" => [
+                            "method" => "OpenBazaar\Filter::isValidAccountType",
+                            "args" => [ "@value" ]
+                        ]
+                    ]
+                ],
+                'username' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ],
+                'proof' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false,
+                ],
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [

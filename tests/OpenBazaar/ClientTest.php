@@ -195,4 +195,22 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         return $client;
     }
+    public function testCreateSocialAccount()
+    {
+        $history = new History();
+        $client = $this->createClient('create_social_account_success', $history);
+        $this->setExpectedException('\Exception', "unknown_account_type is not a valid account type. The API only supports the following types: facebook, twitter, instagram, snapchat");
+        $response = $client->createSocialAccount(
+            [
+                'account_type' => 'unknown_account_type',
+                'username' => 'user',
+            ]
+        );
+        $this->setExpectedException('GuzzleHttp\Command\Exception\CommandException', 'Validation errors: [username] is a required string');
+        $response = $client->createSocialAccount(
+            [
+                'account_type' => 'twitter',
+            ]
+        );
+    }
 }
