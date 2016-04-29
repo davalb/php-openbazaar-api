@@ -213,4 +213,18 @@ class ClientTest extends \PHPUnit_Framework_TestCase
             ]
         );
     }
+    public function testMakeModerator()
+    {
+        $history = new History();
+        $client = $this->createClient('make_moderator_success', $history);
+        $response = $client->makeModerator();
+        $this->assertTrue($response['success']);
+    }
+    public function testUnmakeModerator()
+    {
+        $history = new History();
+        $client = $this->createClient('make_moderator_success', $history);
+        $response = $client->unmakeModerator();
+        $this->assertTrue($response['success']);
+    }
 }

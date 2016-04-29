@@ -269,6 +269,16 @@ return [
                 ],
             ]
         ],
+        'makeModerator' => [
+            'httpMethod' => 'POST',
+            'uri' => 'api/v1/make_moderator',
+            'responseModel' => 'GetResponse',
+        ],
+        'unmakeModerator' => [
+            'httpMethod' => 'POST',
+            'uri' => 'api/v1/unmake_moderator',
+            'responseModel' => 'GetResponse',
+        ],
     ],
     'models' => [
         'GetResponse' => [
