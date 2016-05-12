@@ -48,6 +48,45 @@ $result = $service->createSocialAccount([
     'account_type' => 'twitter',
     'username' => 'user',
 ]);
+
+// upload an image
+$imageurl = "https://placekitten.com/200/300";
+$imagedata = file_get_contents($imageurl);
+$base64 = base64_encode($imagedata);
+$image = [
+	'image' => $base64
+];
+$imageResult = $this->service->uploadImage($image);
+
+// create a new contract (i.e. a new product offering)
+$contract = [
+	'expiration_date' => '',
+	'metadata_category' => 'physical good',
+	'title' => 'Product Title',
+	'currency_code' => 'EUR',
+	'description' => 'A Description about the product',
+	'price' => '9.90',
+	'process_time' => '1',
+	'nsfw' => 'false',
+	'terms_conditions' => '',
+	'shipping_origin' => 'GERMANY',
+	'ships_to' => 'ALL',
+	'est_delivery_domestic' => '2 Business Days',
+	'est_delivery_international' => '7-21 Business Days',
+	'returns' => '',
+	'shipping_currency_code' => 'EUR',
+	'shipping_domestic' => 6,
+	'shipping_international' => 12,
+	'keywords' => 'vinyl',
+	'category' => '',
+	'condition' => 'New',
+	'sku' => '',
+	'free_shipping' => 'false',
+	'images' => $imageResult['image_hashes'][0],
+	'moderators' => 'e85ac56a60d01fa5ad20b3194bfc1c593db17cba',
+	'contract_id' => '',
+];
+$result = $this->service->createContract($contract);
 ?>
 ```
 It is necessary to run the login first. After that you can run more api-calls without worrying about the authentication, since the cookie is persisted. 
