@@ -416,6 +416,28 @@ return [
                     'required' => false
                 ],
             ]
+        ],
+        'uploadImage' => [
+            'httpMethod' => 'POST',
+            'uri' => 'api/v1/upload_image',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'image' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'avatar' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'header' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ]
+            ]
         ]
     ],
     'models' => [

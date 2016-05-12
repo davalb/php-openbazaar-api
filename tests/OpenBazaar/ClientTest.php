@@ -195,6 +195,20 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $client = $this->createClient('post_contracts', $history);
         $response = $client->createContract();
     }
+    public function testUploadImage()
+    {
+        $history = new History();
+        $this->setExpectedException('GuzzleHttp\Command\Exception\CommandException', 'Validation errors: [image] must be of type string
+[avatar] must be of type string
+[header] must be of type string');
+        $client = $this->createClient('upload_image', $history);
+        $parameters = [
+            'image' => false,
+            'avatar' => false,
+            'header' => false,
+        ];
+        $response = $client->uploadImage($parameters);
+    }
 
     protected function createClient($mock, History $history)
     {
