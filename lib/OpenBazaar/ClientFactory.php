@@ -11,6 +11,7 @@ namespace OpenBazaar;
 use GuzzleHttp\Client;
 use GuzzleHttp\Command\Guzzle\Description;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
+use GuzzleHttp\Subscriber\Log\LogSubscriber;
 
 /**
  * Factory class that constructs and returns a configured GuzzleClient
@@ -19,9 +20,10 @@ class ClientFactory
 {
     /**
      * @param array $config array with config-data for service
+     * @param boolean $log if set to true will activate logging for api calls
      * @return GuzzleHttp\Command\Guzzle\GuzzleClient
      */
-    public static function factory(array $config = [])
+    public static function factory(array $config = [], $log = false)
     {
         $defaultConfig = [
             'defaults' => [
@@ -30,6 +32,9 @@ class ClientFactory
         ];
         $mergedConfig = self::mergeRecursive($defaultConfig, $config);
         $client = new Client($mergedConfig);
+        if ($log == true) {
+            $client->getEmitter()->attach(new LogSubscriber());
+        }
         $service = include __DIR__ . '/../../resources/service.php';
         $description = new Description($service);
 
