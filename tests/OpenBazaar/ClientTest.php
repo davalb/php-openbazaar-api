@@ -191,7 +191,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 [currency_code] is a required string
 [price] is a required string
 [process_time] is a required string
-[nsfw] is a required boolean');
+[nsfw] is a required string');
         $client = $this->createClient('post_contracts', $history);
         $response = $client->createContract();
     }

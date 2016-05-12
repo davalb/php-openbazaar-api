@@ -302,7 +302,7 @@ return [
                 ],
                 'description' => [
                     'type' => 'string',
-                    'location' => 'query',
+                    'location' => 'postField',
                     'required' => true
                 ],
                 'currency_code' => [
@@ -321,7 +321,7 @@ return [
                     'required' => true
                 ],
                 'nsfw' => [
-                    'type' => 'boolean',
+                    'type' => 'string',
                     'location' => 'query',
                     'required' => true
                 ],
@@ -331,6 +331,11 @@ return [
                     'required' => false
                 ],
                 'shipping_regions' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'ships_to' => [
                     'type' => 'string',
                     'location' => 'query',
                     'required' => false
@@ -396,7 +401,7 @@ return [
                     'required' => false
                 ],
                 'free_shipping' => [
-                    'type' => 'boolean',
+                    'type' => 'string',
                     'location' => 'query',
                     'required' => false
                 ],
