@@ -278,4 +278,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $client = $this->createClient('mark_notification_as_read', $history);
         $response = $client->markNotificationAsRead();
     }
+    public function testMarkChatMessageAsRead()
+    {
+        $history = new History();
+        $this->setExpectedException('GuzzleHttp\Command\Exception\CommandException', "Validation errors: [guid] is a required string");
+        $client = $this->createClient('mark_chat_message_as_read', $history);
+        $response = $client->markChatMessageAsRead();
+    }
 }

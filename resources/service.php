@@ -523,6 +523,18 @@ return [
                 ]
             ]
         ],
+        'markChatMessageAsRead' => [
+            'httpMethod' => 'POST',
+            'uri' => 'api/v1/mark_chat_message_as_read',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'guid' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => true
+                ]
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [
