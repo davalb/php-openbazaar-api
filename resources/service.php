@@ -510,7 +510,19 @@ return [
                     'required' => true
                 ]
             ]
-        ]
+        ],
+        'markNotificationAsRead' => [
+            'httpMethod' => 'POST',
+            'uri' => 'api/v1/mark_notification_as_read',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'id' => [
+                    'type' => 'string',
+                    'location' => 'query',
+                    'required' => true
+                ]
+            ]
+        ],
     ],
     'models' => [
         'GetResponse' => [
