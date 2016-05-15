@@ -255,4 +255,20 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $response = $client->unmakeModerator();
         $this->assertTrue($response['success']);
     }
+    public function testChangeSettings()
+    {
+        $history = new History();
+        $this->setExpectedException('GuzzleHttp\Command\Exception\CommandException', "Validation errors: [currency_code] is a required string
+[country] is a required string
+[language] is a required string
+[time_zone] is a required string
+[notifications] is a required string
+[shipping_addresses] is a required string
+[blocked] is a required string
+[terms_conditions] is a required string
+[refund_policy] is a required string
+[moderators] is a required string");
+        $client = $this->createClient('change_settings_success', $history);
+        $response = $client->changeSettings();
+    }
 }

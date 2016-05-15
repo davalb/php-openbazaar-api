@@ -438,6 +438,78 @@ return [
                     'required' => false
                 ]
             ]
+        ],
+        'changeSettings' => [
+            'httpMethod' => 'POST',
+            'uri' => 'api/v1/settings',
+            'responseModel' => 'GetResponse',
+            'parameters' => [
+                'refund_address' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'currency_code' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ],
+                'country' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ],
+                'language' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ],
+                'time_zone' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ],
+                'notifications' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ],
+                'shipping_addresses' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ],
+                'blocked' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ],
+                'libbitcoin_server' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'ssl' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => false
+                ],
+                'terms_conditions' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ],
+                'refund_policy' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ],
+                'moderators' => [
+                    'type' => 'string',
+                    'location' => 'postField',
+                    'required' => true
+                ]
+            ]
         ]
     ],
     'models' => [
